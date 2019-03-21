@@ -7,4 +7,5 @@
 5. Open your Google Chrome and type "http://localhost:3000:
 6. Thats all, thank you.
 
-* Lee Benedict F. Baniqued
+
+                                              * Lee Benedict F. Baniqued
