@@ -1,0 +1,102 @@
+
+<div class="auth-page">
+    <div class="container auth-container">
+        <div class="auth">
+
+            <div class="auth-content">
+                <uib-tabset>
+                    <uib-tab class = "main-container">
+                        <div class="login login-container" ng-hide="showme">
+                            <div class="avatar">
+                                <i class="fas fa-user-lock login" aria-hidden = "true"></i>
+                            </div>
+                            <div class="text-center text-mute bold-login">
+                                <h4>Login</h4>
+                            </div>
+                            <div class="form-group">
+                                <input type="username" 
+                                    class="form-control" 
+                                    id="username" 
+                                    placeholder="Username"
+                                    ng-model="data.loginUsername">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" 
+                                    class="form-control" 
+                                    id="login-password" 
+                                    placeholder="Password"
+                                    ng-model="data.loginPassword">
+                            </div>
+                            <div class ="form-group text-center">
+                                <input type="checkbox" id="checkbox" ng-model="passwordCheckbox" ng-click="hideShowPasswordInLogin()" />
+                                <label style = "color: gray" for="checkbox" ng-if="passwordCheckbox">Hide password</label>
+                                <label style = "color: gray" for="checkbox" ng-if="!passwordCheckbox">Show password</label>  
+                            </div>
+                            <div class = "text-center auth-header">
+                                <button class="btn btn-outline-success btn-lg" ng-click="loginUser()">Login</button>
+                                <button ng-click = "showme=true" class="btn btn-outline-info btn-lg">Register</button>
+                            </div>
+                        </div>
+                        <div class="register register-container" ng-show="showme">
+                            <div class="avatar">
+                                <i class="fas fa-user-plus register" aria = "hidden"></i>
+                            </div>
+                            <div class="text-center text-mute bold-register">
+                                <h4>Register</h4>
+                            </div>
+                            <div ng-show='data.usernameAvailable'>
+                                    <div class="alert alert-danger" role="alert">
+                                        <strong>{{ data.regUsername }}</strong> is already taken.
+                                    </div>
+                                </div>
+                            <div class="form-group">
+                                <input type = "text"
+                                    class = "form-control"
+                                    id = "firstname"
+                                    placeholder="Enter your firstname" 
+                                    autocomplete="off"
+                                    ng-model="data.regFirstname" 
+                                /><br>
+                                <input type = "text"
+                                    class = "form-control"
+                                    id = "lastname"
+                                    placeholder="Enter your lastname" 
+                                    autocomplete="off"
+                                    ng-model="data.regLastname" 
+                                /><br>
+                                <input type="text" 
+                                    class="form-control username" 
+                                    id="username" 
+                                    placeholder="Enter your username"
+                                    autocomplete="off"
+                                    ng-model="data.regUsername" 
+                                    ng-keyup="initiateCheckUserName()" 
+                                    ng-keydown="clearCheckUserName()" 
+                                />
+                            </div>
+                            <div class="form-group">
+                                <input type="password" 
+                                    class="form-control" 
+                                    id="reg-password" 
+                                    placeholder="Enter your password"
+                                    ng-model="data.regPassword">
+                            </div>
+                            <div class ="form-group text-center">
+                                <input type="checkbox" id="checkbox" ng-model="passwordCheckbox" ng-click="hideShowPasswordInRegistration()" />
+                                <label style = "color: gray" for="checkbox" ng-if="passwordCheckbox">Hide password</label>
+                                <label style = "color: gray" for="checkbox" ng-if="!passwordCheckbox">Show password</label>  
+                            </div>
+                            <div class = "text-center">
+                                <button ng-click = "showme=false" id = "cancel" class="btn btn-outline-dark btn-lg">Back</button>
+                                <button class="btn btn-outline-success btn-lg" ng-click="registerUser()">Submit</button>
+                            </div>
+                        </div>
+                    </uib-tab>
+                </uib-tabset>
+            </div>        
+        </div>
+    </div>
+</div>
+
+
+

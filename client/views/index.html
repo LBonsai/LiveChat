@@ -1,0 +1,94 @@
+<html ng-app="app">
+    <head>
+        <title>Chat</title>
+        <meta charset="utf-8">
+        <base href="/">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <style type="text/css">
+            .speech-bubble-from
+            {
+                border-color: transparent !important;
+                color: white !important;
+                position: relative !important;
+                background: #0099FF !important;
+                border-radius: .8em !important;
+            }
+            .speech-bubble-from:after 
+            {
+                content: '' !important;
+                position: absolute !important;
+                right: 0 !important;
+                top: 50% !important;
+                width: 0 !important;
+                height: 0 !important;
+                border: 20px solid transparent;
+                border-left-color: #0099FF !important;
+                border-right: 0 !important;
+                border-bottom: 0 !important;
+                margin-top: -10px !important;
+                margin-right: -20px !important;
+            }
+            .speech-bubble-to 
+            {
+                border-color: transparent !important;
+                color: black;
+                position: relative !important;
+                background: #d6d6d6 !important;
+                border-radius: .8em !important;
+            }
+            .speech-bubble-to:after 
+            {
+                content: '' !important;
+                position: absolute !important;
+                left: 0 !important;
+                top: 50% !important;
+                width: 0 !important;
+                height: 0 !important;
+                border: 20px solid transparent !important;
+                border-right-color: #d6d6d6 !important;
+                border-left: 0 !important;
+                border-bottom: 0 !important;
+                margin-top: -10px !important;
+                margin-left: -20px !important;
+            }
+            .onlinecss
+            {
+                color: #fff;
+                background-color: #28a745;
+                border-color: #28a745;
+            }
+            .total-chat
+            {
+                text-align: center; 
+                margin-left: -2px;
+                font-weight: bold;
+                background-color: red;
+                border-radius: 5px;
+                color: #fff;font-size: 20px;
+                float: right;
+                width: 28px;
+            }
+        </style> 
+    </head>
+    <body>
+        <div id="main">
+            <div ng-view></div>
+        </div>
+    </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.6.5/angular-route.min.js"></script>
+    <script src="js/ui-bootstrap-2.5.0.min.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    
+    <script src="js/app.service.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/auth.controller.js"></script>
+    <script src="js/home.controller.js"></script>
+</html>

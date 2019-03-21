@@ -1,0 +1,51 @@
+<div class="home-page" style = "background: #25262d;height: 100%">
+    <div class="home-header" style = "background-color: #6c757d;">
+        <span class=""><i style = "font-size: 20px; "class="fas fa-user-tie" aria-hidden = "true"></i> &nbsp;Welcome {{ data.username }}</span>
+        <span class = "btn" style = "float: right; margin-top: -0.5%;cursor: pointer;color: #fff;background-color: #dc3545; border-color: #dc3545;" ng-click ="logout()">Logout</i>
+        </span>        
+    </div>
+    <div class="home-body">
+        <div class="row ">
+            <div class="col-md-8">
+                <div class="message-container" style = "background: #ffffff">
+                    <p ng-show="data.selectedFriendId !== null" ? true : false >
+                        <i class="fas fa-user-circle" style = "font-size: 20px" aria-hidden = "true">
+                            <span class="message-heading"> {{data.selectedFriendFirstname}} {{data.selectedFriendLastname}}</span>
+                        </i>
+                    </p>
+                    <div style = "width: 99.9%;margin-left: -10px">
+                        <ul class="message-thread" id = "convo">
+                            <li ng-repeat="messagePacket in data.messages"
+                                ng-class="{ 'align-right' : alignMessage(messagePacket.fromUserId), 'speech-bubble-from' : alignMessage(messagePacket.fromUserId), 'align-left' : alignMessage(messagePacket.toUserId), 'speech-bubble-to' : alignMessage(messagePacket.toUserId) } ">
+                                {{messagePacket.message}}
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="message-text">
+                        <textarea ng-disabled="true" type = "text" id="message" style = "margin-left: -10px; width: 98.1%;" placeholder="Enter message then hit Enter" class="message form-control" ng-keydown="sendMessage($event)"
+                        ></textarea> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="chat-list-container">
+                    <p class="alert alert-success" style = "color: #ffffff; background-color: #6b717a;border-color: #2c2d2d;"><i style = "font-size: 30px" class="fas fa-users"></i>&nbsp; &nbsp;<span style = "color: #ffffff; font-size: 20px;">Online Users</span>
+                        <span class = "badge" ng-if="data.chatlist.length > 0">{{data.chatlist.length}}</span>
+                        <span class = "badge_zero" ng-if="data.chatlist.length === 0">{{data.chatlist.length}}</span>
+                    </p>
+                    <div class="chat-list">
+                        <ul class="list-group" ng-if="data.chatlist.length > 0">
+                            <li class="list-group-item"
+                                ng-repeat="friend in data.chatlist"
+                                ng-click="selectFriendToChat(friend.id)"
+                                ng-class="{'onlinecss' :friend.id == data.selectedFriendId}">
+                                {{friend.firstname}} {{friend.lastname}}
+                            </li>
+                        </ul>
+                    </div>                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

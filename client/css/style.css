@@ -1,0 +1,199 @@
+body{
+	overflow-x: hidden;
+}
+
+.auth-page
+{
+	background: #25262d;
+	height: 100%;
+}
+.auth-content
+{
+	margin-top: -20px;
+}
+.auth-container 
+{
+	padding-top: 5%;
+	width: 50%;
+	margin: auto;
+}
+.auth
+{
+	margin-top: -5px !important;
+	background: #ffffff;
+	width: 400px;
+	margin: auto;
+	padding: 5%;
+	border-radius: 5px;
+	border: solid 1px #0000003d;
+}
+
+.auth-header-btn
+{
+	width: 49%;
+}
+
+.login,
+.register 
+{
+	padding: 1.5%;
+}
+.home-header 
+{
+	width: 100%;
+	padding: 1% 1% 1% 1%;
+	background: #007bff;
+	margin-bottom: 20px;
+	color: #ffffff;
+}
+.home-body 
+{
+	width: 100%;
+	height:85%;
+}
+
+.message-container
+{
+	padding: 20px 0px 20px 20px;
+	background-color: rgba(255, 255, 255, 0.80);
+	margin: 10px 0px 10px 10px;
+	border-radius: 5px;
+}
+
+.message-thread 
+{
+	overflow-y: scroll;
+	list-style-type: none;
+	height: 400px;
+	width: 100%;
+	border: solid 1px #BDBDBD;
+	margin: 0px !important;
+	padding: 5px !important;
+}
+
+.message-thread li 
+{
+	max-width: 300px;
+	border-color: solid 0.5px rgba(0, 0, 0, 0.32);
+	clear: both;
+	text-decoration: none;
+	list-style-type: none;
+	margin: 20px 10px 0px 20px;
+	float: left;
+	margin-right: 20px;
+	padding: 25px 34px;
+	min-width: 160px;
+	min-height: 10px;
+	max-width: 350px;
+	border-radius: 5px;
+	border:solid 1px #0000001f;
+	background-color: rgba(255, 255, 255, 0.80);
+	line-height: 1.4;
+	word-wrap: break-word;
+	color: #444444;
+	text-align: left;
+}
+
+.align-left 
+{
+	float: left !important;;
+}
+.align-right 
+{
+	float: right !important;;
+}
+
+.message-text
+{
+	margin-top: 1%;
+}
+
+.chat-list-container {
+	padding: 20px 20px 20px 0px;
+}
+
+.chat-list-heading {
+	margin: 10px 10px 10px 0px;
+}
+
+.chat-list{
+	overflow-y: scroll;
+	height: 400px;
+	width: 100%;
+	margin: 10px 10px 10px 0px;
+	padding-right: 20px;
+}
+
+.chat-list li{
+	cursor: pointer;
+}
+.avatar
+{
+	position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 100px !important;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    z-index: 9;
+    background: #383b3f;
+    padding: 15px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.bold-register h4
+{
+	margin-top: 120px;
+	margin-bottom: -2px;
+}
+.bold-login h4
+{
+	margin-top: 100px;
+	margin-bottom: 10px;
+}
+.avatar .login
+{
+	font-size: 57px;
+	color: white;
+	margin-left: -3px;
+}
+.avatar .register
+{
+	font-size: 57px;
+	color: white;
+	margin-top: 0px;
+	margin-left: -3px;
+}
+.register
+{
+	margin-top: -20px;
+}
+.registerword
+{
+	margin-top: 85px;
+}
+.bold-register
+{
+	margin-top: 85px;
+	margin-bottom: 15px;
+}
+.badge
+{
+  background-color: green;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 20px;
+  float: right;
+}
+.badge_zero
+{
+	text-align: center; 
+	margin-left: -2px;
+	font-weight: bold;
+	background-color: red;
+	border-radius: 5px;
+	color: #fff;font-size: 20px;
+	float: right;
+	width: 28px;
+}
